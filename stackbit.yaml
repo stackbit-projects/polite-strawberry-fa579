@@ -1,0 +1,167 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: custom_js
+        label: Custom Js
+      - type: string
+        name: category
+        label: Category
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - about.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - archive.md
+      - example2-archive.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: which_category
+        label: Which Category
+  page_3:
+    type: page
+    label: Page 3
+    match:
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+  menu:
+    type: data
+    label: Menu
+    file: menu.yml
+    fields:
+      - type: list
+        name: entries
+        label: Entries
+        items:
+          type: model
+          models:
+            - object_opgbh2sthy
+            - object_asvejthoqc
+            - object_0op3pq9mrt
+  object_6exzsmn2ol:
+    type: object
+    label: Object 1
+    fields:
+      - type: markdown
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
+  object_er3gw7die9:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: entries
+        label: Entries
+        items:
+          type: object
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: string
+              name: url
+              label: Url
+  object_bt1rjy2ucj:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: title
+        label: Title
+  object_opgbh2sthy:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: entries
+        label: Entries
+        items:
+          type: model
+          models:
+            - object_6exzsmn2ol
+            - object_er3gw7die9
+            - object_bt1rjy2ucj
+  object_asvejthoqc:
+    type: object
+    label: Object 5
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: object
+        name: post_list
+        label: Post List
+        fields:
+          - type: number
+            name: limit
+            label: Limit
+            subtype: int
+          - type: boolean
+            name: show_more
+            label: Show More
+          - type: string
+            name: show_more_text
+            label: Show More Text
+          - type: string
+            name: show_more_url
+            label: Show More Url
+          - type: string
+            name: category
+            label: Category
+  object_0op3pq9mrt:
+    type: object
+    label: Object 6
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: url
+        label: Url
